@@ -8,8 +8,13 @@ module.exports = {
         violet: "#6750A4",
       },
     },
-    fontFamily: {
-      inter: ["Inter", "sans-serif"],
+    fontWeight: {
+      thin: 100,
+      extralight: 200,
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semibold: 600,
     },
   },
   plugins: [],

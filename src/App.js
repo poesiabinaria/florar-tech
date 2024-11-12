@@ -5,7 +5,7 @@ import logo from "./img/logo.svg";
 
 const App = () => {
   return (
-    <div className="App font-inter">
+    <div className="App">
       <header className="bg-dark px-2 py-6">
         <nav className="container mx-auto flex items-center justify-between text-white">
           <ul className="flex items-center gap-16 text-sm basis-1/3">
@@ -26,16 +26,16 @@ const App = () => {
 
       <div id="hero" className="bg-dark text-white py-20">
         <div id="action-container" className="container mx-auto text-center">
-          <h1 className="test text-5xl mb-10">
+          <h1 className="font-thin text-5xl mb-10">
             <span>
-              Criação de <span className="font-">Sites/Aplicativos</span>
+              Criação de <span className="font-light">Sites/Aplicativos</span>
             </span>
             <span className="block mt-4">
-              UI/UX <span className="font-medium">Design</span>
+              UI/UX <span className="font-light">Design</span>
             </span>
           </h1>
 
-          <p className="opacity-75 max-w-screen-lg leading-7 mx-auto">
+          <p className="font-extralight opacity-90 max-w-screen-lg leading-7 mx-auto">
             Me chamo Gabriel e crio soluções com Desenvolvimento WEB/Aplicativos
             e UI/UX Design. Desde quando conheci as duas áreas, sabia que queria
             juntá-las para criar coisas bem legais e fazer a diferença com meu
@@ -45,27 +45,27 @@ const App = () => {
 
         <div
           id="feature-cards"
-          className="container mx-auto grid grid-cols-3 gap-8 mt-20"
+          className="container mx-auto grid grid-cols-3 gap-20 mt-20"
         >
           <FeatureCard
-            icon=""
+            iconColor="blue"
             content="Desenvolvo soluções para WEB responsivas e aplicativos utilizando as tecnologias mais recentes do mercado"
           />
 
           <FeatureCard
-            icon=""
+            iconColor="violet"
             content="Sou um desenvolvedor com experiência sólida em Design! Sigo as boas práticas e prezo sempre pela ótima experiência do usuário"
           />
 
           <FeatureCard
-            icon=""
+            iconColor="yellow"
             content="Acredito muito na transformação que um bom trabalho pode causar e faço o possível para que meus clientes e usuários fiquem satisfeitos"
           />
         </div>
       </div>
 
       <div id="work-process" className="relative bg-violet text-white py-20">
-        <div className="absolute w-full top-4 uppercase text-9xl text-white/[0.02] text-center font-black tracking-[5rem]">
+        <div className="absolute w-full top-4 uppercase text-9xl text-white/[0.02] text-center font-bold tracking-[5rem]">
           Processo
         </div>
         <div className="container mx-auto">
