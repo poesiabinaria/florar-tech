@@ -8,7 +8,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  background-color: #191919;
   font-family: "Inter", serif;
   font-optical-sizing: auto;
   font-weight: 400;

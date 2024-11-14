@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         dark: "#191919",
         violet: "#6750A4",
+        blue: "#00FFF2",
+        pink: "#B200FF",
+        yellow: { 500: "#FF9113", 900: "#4E2C06" },
       },
     },
     fontWeight: {

@@ -5,10 +5,10 @@ import logo from "./img/logo.svg";
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="bg-dark px-2 py-6">
+    <div>
+      <header className="px-2 py-10">
         <nav className="container mx-auto flex items-center justify-between text-white">
-          <ul className="flex items-center gap-16 text-sm basis-1/3">
+          <ul className="flex items-center gap-16 uppercase font-extgralight text-xs basis-1/3">
             <li className="opacity-60 hover:opacity-100">Processo</li>
             <li className="opacity-60 hover:opacity-100">Portfolio</li>
             <li className="opacity-60 hover:opacity-100">Depoimentos</li>
@@ -19,12 +19,14 @@ const App = () => {
           </div>
 
           <div className="basis-1/3 text-end">
-            <button>Contato</button>
+            <button className="transition-all ease-out duration-100 bg-yellow-500 text-yellow-900 shadow-lg shadow-yellow-500/40 hover:shadow-yellow-500/60 text-sm font-semibold px-6 py-2 rounded-full">
+              Contato
+            </button>
           </div>
         </nav>
       </header>
 
-      <div id="hero" className="bg-dark text-white py-20">
+      <div id="hero" className="text-white py-20">
         <div id="action-container" className="container mx-auto text-center">
           <h1 className="font-thin text-5xl mb-10">
             <span>
@@ -45,7 +47,7 @@ const App = () => {
 
         <div
           id="feature-cards"
-          className="container mx-auto grid grid-cols-3 gap-20 mt-20"
+          className="container mx-auto grid grid-cols-4 gap-20 mt-20"
         >
           <FeatureCard
             iconColor="blue"
@@ -61,17 +63,34 @@ const App = () => {
             iconColor="yellow"
             content="Acredito muito na transformação que um bom trabalho pode causar e faço o possível para que meus clientes e usuários fiquem satisfeitos"
           />
+
+          <FeatureCard
+            iconColor="yellow"
+            content="Acredito muito na transformação que um bom trabalho pode causar e faço o possível para que meus clientes e usuários fiquem satisfeitos"
+          />
         </div>
       </div>
 
-      <div id="work-process" className="relative bg-violet text-white py-20">
+      <div
+        id="work-process"
+        className="container mx-auto relative bg-violet text-white px-20 py-20 mt-10 rounded-3xl"
+      >
         <div className="absolute w-full top-4 uppercase text-9xl text-white/[0.02] text-center font-bold tracking-[5rem]">
           Processo
         </div>
-        <div className="container mx-auto">
-          <div className="mb-10">
-            <div className="text-xs text-white/50 uppercase mb-1">Processo</div>
-            <h2>Meu processo de trabalho</h2>
+        <div>
+          <div className="mb-10 font-light">
+            <div className="relative">
+              <div className="absolute top-0 h-full w-2 rounded-xl bg-gradient-to-t from-yellow-500 via-pink to-blue" />
+              <div className="text-xs text-white/80 uppercase mb-3 ml-7">
+                Processo
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute top-0 h-full w-2 rounded-xl bg-gradient-to-t from-blue via-pink to-yellow-500" />
+              <h2 className="text-2xl ml-7">Meu processo de trabalho</h2>
+            </div>
           </div>
 
           <div className="grid grid-cols-3 gap-2">
