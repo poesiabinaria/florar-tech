@@ -1,7 +1,9 @@
 import "./App.css";
 import FeatureCard from "./components/FeatureCard";
+import Subtitle from "./components/Subtitle";
 import WorkProcessCard from "./components/WorkProcessCard";
 import logo from "./img/logo.svg";
+import { gradientStyle, textGradientStyle } from "./utils/constants";
 
 const App = () => {
   return (
@@ -27,7 +29,23 @@ const App = () => {
       </header>
 
       <div id="hero" className="text-white py-20">
-        <div id="action-container" className="container mx-auto text-center">
+        <div
+          id="action-container"
+          className="container mx-auto relative text-center"
+        >
+          <div className="absolute -top-[35%] left-[20%]">
+            <div
+              className={`${gradientStyle} opacity-20 w-[20rem] h-[20rem] rounded-full blur-3xl`}
+            />
+          </div>
+          <div className="absolute -top-[30%] left-[22%]">
+            <div
+              className={`text-[12rem] font-semibold opacity-5 ${textGradientStyle}`}
+            >
+              &&
+            </div>
+          </div>
+
           <h1 className="font-thin text-5xl mb-10">
             <span>
               Criação de <span className="font-light">Sites/Aplicativos</span>
@@ -47,7 +65,7 @@ const App = () => {
 
         <div
           id="feature-cards"
-          className="container mx-auto grid grid-cols-4 gap-20 mt-20"
+          className="container mx-auto grid grid-cols-3 gap-20 mt-20"
         >
           <FeatureCard
             iconColor="blue"
@@ -63,35 +81,20 @@ const App = () => {
             iconColor="yellow"
             content="Acredito muito na transformação que um bom trabalho pode causar e faço o possível para que meus clientes e usuários fiquem satisfeitos"
           />
-
-          <FeatureCard
-            iconColor="yellow"
-            content="Acredito muito na transformação que um bom trabalho pode causar e faço o possível para que meus clientes e usuários fiquem satisfeitos"
-          />
         </div>
       </div>
 
       <div
         id="work-process"
-        className="container mx-auto relative bg-violet text-white px-20 py-20 mt-10 rounded-3xl"
+        className="container mx-auto relative bg-violet text-white px-20 py-20 mt-10 mb-20 rounded-3xl"
       >
-        <div className="absolute w-full top-4 uppercase text-9xl text-white/[0.02] text-center font-bold tracking-[5rem]">
+        <div
+          className={`absolute -right-[9%] bottom-[44%] rotate-90 uppercase text-3xl text-center font-bold tracking-[1.5rem] opacity-40 ${textGradientStyle}`}
+        >
           Processo
         </div>
         <div>
-          <div className="mb-10 font-light">
-            <div className="relative">
-              <div className="absolute top-0 h-full w-2 rounded-xl bg-gradient-to-t from-yellow-500 via-pink to-blue" />
-              <div className="text-xs text-white/80 uppercase mb-3 ml-7">
-                Processo
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="absolute top-0 h-full w-2 rounded-xl bg-gradient-to-t from-blue via-pink to-yellow-500" />
-              <h2 className="text-2xl ml-7">Meu processo de trabalho</h2>
-            </div>
-          </div>
+          <Subtitle badge="Processo" subtitle="Meu processo de trabalho" />
 
           <div className="grid grid-cols-3 gap-2">
             <WorkProcessCard
@@ -116,6 +119,10 @@ const App = () => {
             />
           </div>
         </div>
+      </div>
+
+      <div id="portfolio" className="container mx-auto">
+        <Subtitle badge="Portfolio" subtitle="Trabalhos que já fiz" />
       </div>
     </div>
   );
