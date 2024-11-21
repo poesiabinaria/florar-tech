@@ -4,7 +4,12 @@ import SectionTitle from "./components/SectionTitle";
 import Section from "./components/Section";
 import WorkProcessCard from "./components/WorkProcessCard";
 import logo from "./img/logo.svg";
+import linkedInLogo from "./img/linkedin-logo.png";
+
 import { gradientStyle, textGradientStyle } from "./utils/constants";
+import { useEffect, useState } from "react";
+import FadeCarousel from "./components/FadeCarrousel";
+import PortfolioItem from "./components/PortfolioItem";
 
 const App = () => {
   return (
@@ -21,10 +26,15 @@ const App = () => {
             <img className="mx-auto" src={logo} />
           </div>
 
-          <div className="basis-1/3 text-end">
-            <button className="transition-all ease-out duration-100 bg-yellow-500 text-yellow-900 shadow-lg shadow-yellow-500/40 hover:shadow-yellow-500/60 text-sm font-semibold px-6 py-2 rounded-full">
-              Contato
-            </button>
+          <div className="flex items-center justify-end gap-10 basis-1/3">
+            <div>
+              <img className="w-6" src={linkedInLogo} />
+            </div>
+            <div>
+              <button className="transition-all ease-out duration-100 bg-yellow-500 text-yellow-900 shadow-lg shadow-yellow-500/40 hover:shadow-yellow-500/60 text-sm font-semibold px-6 py-2 rounded-full">
+                Contato
+              </button>
+            </div>
           </div>
         </nav>
       </header>
@@ -119,44 +129,53 @@ const App = () => {
       <Section
         id="portfolio-section"
         badge="Portfolio"
-        title="Trabalhos que já fiz"
+        title="Trabalhos mais relevantes"
         theme="dark"
       >
-        <div className="grid grid-cols-2 gap-10 mt-14">
-          <div>
-            <div id="header" className="flex items-center mb-4">
-              <div className="rounded-full bg-white/20 w-14 h-14 mr-4"></div>
-              <div>
-                <div>Anjinho Pet</div>
-                <div>Em andamento</div>
-              </div>
-            </div>
+        <PortfolioItem
+          projectName="Anjinho Pet"
+          status="Em andamento"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in
+            leo a libero porttitor ullamcorper at vel nulla. Fusce in convallis
+            elit. Sed dapibus commodo ligula in vulputate. Nullam porttitor non
+            nunc in facilisis. Etiam et varius odio. Ut quis urna orci. Nulla
+            facilisi. Suspendisse gravida neque at mauris pharetra, nec molestie
+            neque euismod."
+          technologies={[
+            { name: "React Native", icon: "url" },
+            { name: "React", icon: "url" },
+            { name: "React", icon: "url" },
+          ]}
+          images={[
+            "https://via.placeholder.com/800x300?text=Image+1",
+            "https://via.placeholder.com/800x300?text=Image+2",
+            "https://via.placeholder.com/800x300?text=Image+3",
+          ]}
+          order="order-first"
+        />
 
-            <div id="body">
-              <div className="description leading-7 text-sm text-white/75">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                in leo a libero porttitor ullamcorper at vel nulla. Fusce in
-                convallis elit. Sed dapibus commodo ligula in vulputate. Nullam
-                porttitor non nunc in facilisis. Etiam et varius odio. Ut quis
-                urna orci. Nulla facilisi. Suspendisse gravida neque at mauris
-                pharetra, nec molestie neque euismod.
-              </div>
-
-              <div className="technologies mt-10">
-                <div className="mb-4">Tecnologias utilizadas</div>
-
-                <div>
-                  <div className="item-tech flex items-center">
-                    <div className="rounded-full bg-white/20 w-10 h-10 mr-4"></div>
-                    <div>React Native</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-violet/15"></div>
-        </div>
+        <PortfolioItem
+          projectName="Central de Serviços UFPE"
+          status="Concluído"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in
+            leo a libero porttitor ullamcorper at vel nulla. Fusce in convallis
+            elit. Sed dapibus commodo ligula in vulputate. Nullam porttitor non
+            nunc in facilisis. Etiam et varius odio. Ut quis urna orci. Nulla
+            facilisi. Suspendisse gravida neque at mauris pharetra, nec molestie
+            neque euismod."
+          technologies={[
+            { name: "WordPress", icon: "url" },
+            { name: "React", icon: "url" },
+            { name: "React", icon: "url" },
+          ]}
+          images={[
+            "https://via.placeholder.com/800x300?text=Image+1",
+            "https://via.placeholder.com/800x300?text=Image+2",
+            "https://via.placeholder.com/800x300?text=Image+3",
+          ]}
+          order="order-last"
+          isLastItem={true}
+        />
       </Section>
     </div>
   );
