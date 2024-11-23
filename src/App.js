@@ -10,6 +10,8 @@ import { gradientStyle, textGradientStyle } from "./utils/constants";
 import { useEffect, useState } from "react";
 import FadeCarousel from "./components/FadeCarrousel";
 import PortfolioItem from "./components/PortfolioItem";
+import Input from "./components/Input";
+import TextArea from "./components/TextArea";
 
 const App = () => {
   return (
@@ -177,6 +179,48 @@ const App = () => {
           isLastItem={true}
         />
       </Section>
+
+      <Section
+        id="contact-section"
+        badge="Contato"
+        title="Como posso te ajudar?"
+        theme="light"
+      >
+        <div className="leading-7 text-white/75 mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in leo
+          a libero porttitor ullamcorper at vel nulla. Fusce in convallis elit.
+          Sed dapibus commodo ligula in vulputate. Nullam porttitor non nunc in
+          facilisis. Etiam et varius odio. Ut quis urna orci. Nulla facilisi.
+          Suspendisse gravida neque at mauris pharetra, nec molestie neque
+          euismod. 
+        </div>
+
+        <div className="bg-dark/10 rounded-3xl p-10">
+          <div className="flex items-start gap-10 ">
+            <div className="basis-1/2">
+              <Input id="name" label="Nome" />
+              <Input id="email" label="Seu melhor e-mail*" type="email" />
+              <Input
+                id="whatsapp"
+                label="Seu Whatsapp (opcional)"
+                placeholder="(XX) 9.XXXX-XXXX"
+                type="number"
+              />
+            </div>
+
+            <div className="basis-1/2">
+              <TextArea id="description" label="Descrição" />
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <footer className="flex items-center justify-center py-20 text-sm">
+        <div className="text-white/60 mr-4">Feito com amor por </div>
+        <div>
+          <img className="w-28" src={logo} />
+        </div>
+      </footer>
     </div>
   );
 };
