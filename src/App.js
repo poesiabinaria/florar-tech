@@ -5,6 +5,8 @@ import Section from "./components/Section";
 import WorkProcessCard from "./components/WorkProcessCard";
 import logo from "./img/logo.svg";
 import linkedInLogo from "./img/linkedin-logo.png";
+import emailIcon from "./img/email-icon.svg";
+import instagramLogo from "./img/instagram-logo.svg";
 
 import { gradientStyle, textGradientStyle } from "./utils/constants";
 import { useEffect, useState } from "react";
@@ -186,31 +188,49 @@ const App = () => {
         title="Como posso te ajudar?"
         theme="light"
       >
-        <div className="leading-7 text-white/75 mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in leo
-          a libero porttitor ullamcorper at vel nulla. Fusce in convallis elit.
-          Sed dapibus commodo ligula in vulputate. Nullam porttitor non nunc in
-          facilisis. Etiam et varius odio. Ut quis urna orci. Nulla facilisi.
-          Suspendisse gravida neque at mauris pharetra, nec molestie neque
-          euismod. 
-        </div>
+        <div className="flex gap-10">
+          <div className="basis-1/2 leading-7 text-white/75">
+            <div className="mb-3">
+              Se preferir, entre em contato pelos meios abaixo!
+            </div>
 
-        <div className="bg-dark/10 rounded-3xl p-10">
-          <div className="flex items-start gap-10 ">
-            <div className="basis-1/2">
-              <Input id="name" label="Nome" />
-              <Input id="email" label="Seu melhor e-mail*" type="email" />
+            <div className="flex items-center gap-5">
+              <div className="flex items-center">
+                <img className="w-6 mr-2" src={emailIcon} />
+                <div>ola@florartech.com.br</div>
+              </div>
+              <div className="flex items-center my-3">
+                <img className="w-6 mr-2" src={linkedInLogo} />
+                <div>LinkedIn</div>
+              </div>
+              <div className="flex items-center">
+                <img className="w-6 mr-2" src={instagramLogo} />
+                <div>Instagram</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="basis-1/2 bg-dark/10 rounded-3xl p-10">
+            <form action="https://formspree.io/f/xanydpyy" method="POST">
+              <Input id="name" label="Nome*" required />
+              <Input
+                id="email"
+                label="Seu melhor e-mail*"
+                type="email"
+                required
+              />
               <Input
                 id="whatsapp"
-                label="Seu Whatsapp (opcional)"
+                label="Whatsapp (opcional)"
                 placeholder="(XX) 9.XXXX-XXXX"
                 type="number"
               />
-            </div>
+              <TextArea id="description" label="Descrição*" required />
 
-            <div className="basis-1/2">
-              <TextArea id="description" label="Descrição" />
-            </div>
+              <button className="w-full bg-yellow-500 text-yellow-900  hover:shadow-yellow-500/60 text-sm font-semibold px-6 py-3 rounded-full">
+                Enviar!
+              </button>
+            </form>
           </div>
         </div>
       </Section>
