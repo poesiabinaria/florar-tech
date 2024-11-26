@@ -13,8 +13,7 @@ const TextArea = ({ id, label, required, type = "text" }) => {
         name={id}
         type={type}
         required={required}
-        className="w-full p-3 bg-[#D8CAFF] placeholder-violet/60 text-violet focus:outline-none rounded-lg"
-        rows="9"
+        className="w-full p-3 bg-[#D8CAFF] placeholder-violet/60 text-violet focus:outline-none rounded-lg h-[250px]"
         placeholder="Me descreva o que você precisa. Exemplo: queria desenvolver um app para minha loja"
       />
     </div>

@@ -7,6 +7,8 @@ import logo from "./img/logo.svg";
 import linkedInLogo from "./img/linkedin-logo.png";
 import emailIcon from "./img/email-icon.svg";
 import instagramLogo from "./img/instagram-logo.svg";
+import newTabIcon from "./img/new-tab-icon.svg";
+import copyIcon from "./img/copy-icon.svg";
 
 import { gradientStyle, textGradientStyle } from "./utils/constants";
 import { useEffect, useState } from "react";
@@ -30,15 +32,20 @@ const App = () => {
             <img className="mx-auto" src={logo} />
           </div>
 
-          <div className="flex items-center justify-end gap-10 basis-1/3">
-            <div>
-              <img className="w-6" src={linkedInLogo} />
-            </div>
-            <div>
-              <button className="transition-all ease-out duration-100 bg-yellow-500 text-yellow-900 shadow-lg shadow-yellow-500/40 hover:shadow-yellow-500/60 text-sm font-semibold px-6 py-2 rounded-full">
-                Contato
-              </button>
-            </div>
+          <div className="flex items-center justify-end basis-1/3">
+            <ul className="flex items-center gap-16 uppercase font-extgralight text-xs basis-1/3">
+              <li className="flex gap-2 items-center opacity-60 hover:opacity-100">
+                <div>LinkedIn</div> <img className="w-4" src={newTabIcon} />
+              </li>
+              <li className="flex gap-2 items-center opacity-60 hover:opacity-100">
+                <div>Instagram</div> <img className="w-4" src={newTabIcon} />
+              </li>
+              <li>
+                <button className="transition-all ease-out duration-100 bg-yellow-500 text-yellow-900 shadow-lg shadow-yellow-500/40 hover:shadow-yellow-500/60 text-sm font-semibold px-6 py-2 rounded-full">
+                  Contato
+                </button>
+              </li>
+            </ul>
           </div>
         </nav>
       </header>
@@ -188,48 +195,79 @@ const App = () => {
         title="Como posso te ajudar?"
         theme="light"
       >
-        <div className="flex gap-10">
-          <div className="basis-1/2 leading-7 text-white/75">
-            <div className="mb-3">
+        <div>
+          <div className="mb-10">
+            <div className="mb-2">
               Se preferir, entre em contato pelos meios abaixo!
             </div>
 
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-8">
               <div className="flex items-center">
-                <img className="w-6 mr-2" src={emailIcon} />
-                <div>ola@florartech.com.br</div>
+                <img className="w-6 mr-3" src={emailIcon} />
+                <div className="flex items-center gap-2">
+                  <div>ola@florartech.com.br</div>
+                </div>
               </div>
-              <div className="flex items-center my-3">
-                <img className="w-6 mr-2" src={linkedInLogo} />
-                <div>LinkedIn</div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/gabriel-mendes-macedo"
+                  target="_blank"
+                  className="flex items-center my-3"
+                >
+                  <img className="w-6 mr-3" src={linkedInLogo} />
+                  <div className="flex items-center gap-2">
+                    <div>LinkedIn</div>
+                    <img className="w-4" src={newTabIcon} />
+                  </div>
+                </a>
               </div>
-              <div className="flex items-center">
-                <img className="w-6 mr-2" src={instagramLogo} />
-                <div>Instagram</div>
+              <div>
+                <a
+                  href="https://www.instagram.com/florartech"
+                  target="_blank"
+                  className="flex items-center my-3"
+                >
+                  <img className="w-6 mr-3" src={instagramLogo} />
+                  <div className="flex items-center gap-2">
+                    <div>Instagram</div>
+                    <img className="w-4" src={newTabIcon} />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="basis-1/2 bg-dark/10 rounded-3xl p-10">
+          <div className="bg-dark/10 rounded-3xl p-10">
             <form action="https://formspree.io/f/xanydpyy" method="POST">
-              <Input id="name" label="Nome*" required />
-              <Input
-                id="email"
-                label="Seu melhor e-mail*"
-                type="email"
-                required
-              />
-              <Input
-                id="whatsapp"
-                label="Whatsapp (opcional)"
-                placeholder="(XX) 9.XXXX-XXXX"
-                type="number"
-              />
-              <TextArea id="description" label="Descrição*" required />
+              <div className="flex gap-10">
+                <div className="w-1/2">
+                  <Input id="name" label="Nome*" required />
+                  <Input
+                    id="email"
+                    label="Seu melhor e-mail*"
+                    type="email"
+                    required
+                  />
+                  <Input
+                    id="whatsapp"
+                    label="Whatsapp (opcional)"
+                    placeholder="(XX) 9.XXXX-XXXX"
+                    type="number"
+                  />
+                </div>
+                <div className="w-1/2">
+                  <TextArea id="description" label="Descrição*" required />
+                </div>
+              </div>
 
-              <button className="w-full bg-yellow-500 text-yellow-900  hover:shadow-yellow-500/60 text-sm font-semibold px-6 py-3 rounded-full">
-                Enviar!
-              </button>
+              <div className="w-32 ml-auto">
+                <button
+                  className="w-full bg-yellow-500 text-yellow-900  hover:shadow-yellow-500/60 text-sm font-semibold px-6 py-3 mt-8 rounded-full"
+                  type="submit"
+                >
+                  Enviar!
+                </button>
+              </div>
             </form>
           </div>
         </div>
