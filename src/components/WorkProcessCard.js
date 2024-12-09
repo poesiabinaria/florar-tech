@@ -20,7 +20,7 @@ const WorkProcessCard = ({ icon, title, subtitle, content }) => {
           <div className="text-xs opacity-50 uppercase">{subtitle}</div>
         </div>
       </div>
-      <div className="text-sm text-white/75 leading-6 mt-2">{content}</div>
+      <div className="text-sm text-white/75 leading-7 mt-2">{content}</div>
     </div>
   );
 };

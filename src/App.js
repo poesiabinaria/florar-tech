@@ -8,7 +8,13 @@ import linkedInLogo from "./img/linkedin-logo.png";
 import emailIcon from "./img/email-icon.svg";
 import instagramLogo from "./img/instagram-logo.svg";
 import newTabIcon from "./img/new-tab-icon.svg";
-import copyIcon from "./img/copy-icon.svg";
+import csticLogo from "./img/cstic-logo.png";
+import anjinhoPetLogo from "./img/anjinho-pet-logo.png";
+import wordpressLogo from "./img/wordpress-logo.png";
+import bootstrapLogo from "./img/bootstrap-logo.png";
+import reactLogo from "./img/react-logo.svg";
+import nodejsLogo from "./img/nodejs-logo.svg";
+import postgreeLogo from "./img/postgree-logo.png";
 
 import { gradientStyle, textGradientStyle } from "./utils/constants";
 import { useEffect, useState } from "react";
@@ -88,11 +94,11 @@ const App = () => {
 
         <div
           id="feature-cards"
-          className="container mx-auto grid grid-cols-3 gap-20 mt-20"
+          className="container mx-auto grid grid-cols-4 gap-14 mt-20"
         >
           <FeatureCard
             iconColor="blue"
-            content="Desenvolvo soluções para WEB responsivas e aplicativos utilizando as tecnologias mais recentes do mercado"
+            content="Cada produto é pensado para unir estética e funcionalidade, alinhado às necessidades do cliente e utilizando as tecnologias mais recentes do mercado"
           />
 
           <FeatureCard
@@ -102,7 +108,12 @@ const App = () => {
 
           <FeatureCard
             iconColor="yellow"
-            content="Acredito muito na transformação que um bom trabalho pode causar e faço o possível para que meus clientes e usuários fiquem satisfeitos"
+            content="Me formei em Sistemas de Informação pelo Centro de Informática (CIn) da UFPE. Trabalhei para uma multinacional e atualmente atuo numa empresa de Segurança"
+          />
+
+          <FeatureCard
+            iconColor="yellow"
+            content="Acredito muito na transformação que um bom trabalho pode causar e faço o possível para que meus clientes e seus usuários fiquem satisfeitos :)"
           />
         </div>
       </div>
@@ -144,18 +155,13 @@ const App = () => {
         theme="dark"
       >
         <PortfolioItem
-          projectName="Anjinho Pet"
-          status="Em andamento"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in
-            leo a libero porttitor ullamcorper at vel nulla. Fusce in convallis
-            elit. Sed dapibus commodo ligula in vulputate. Nullam porttitor non
-            nunc in facilisis. Etiam et varius odio. Ut quis urna orci. Nulla
-            facilisi. Suspendisse gravida neque at mauris pharetra, nec molestie
-            neque euismod."
+          logo={csticLogo}
+          projectName="Central de Serviços de Tecnologia da Informação e Comunicação (CSTIC)"
+          url="https://sites.ufpe.br/cstic"
+          description="O site da CSTIC da UFPE é o canal centralizado para as solicitações e acompanhamento dos serviços de TIC oferecidos à comunidade acadêmica da UFPE. Ainda como estagiário, desenhei o protótipo e desenvolvi o site, trabalhando como designer e desenvolvedor. Foi nesse projeto que melhorei bastante meus conhecimentos em design e desenvolvimento. Os clientes e usuários gostaram bastante e foi muito legal de fazer!"
           technologies={[
-            { name: "React Native", icon: "url" },
-            { name: "React", icon: "url" },
-            { name: "React", icon: "url" },
+            { name: "WordPress", icon: wordpressLogo },
+            { name: "Bootstrap", icon: bootstrapLogo },
           ]}
           images={[
             "https://via.placeholder.com/800x300?text=Image+1",
@@ -166,18 +172,14 @@ const App = () => {
         />
 
         <PortfolioItem
-          projectName="Central de Serviços UFPE"
-          status="Concluído"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in
-            leo a libero porttitor ullamcorper at vel nulla. Fusce in convallis
-            elit. Sed dapibus commodo ligula in vulputate. Nullam porttitor non
-            nunc in facilisis. Etiam et varius odio. Ut quis urna orci. Nulla
-            facilisi. Suspendisse gravida neque at mauris pharetra, nec molestie
-            neque euismod."
+          logo={anjinhoPetLogo}
+          projectName="Anjinho PET"
+          status="Em andamento"
+          description="O app Anjinho PET é um projeto pessoal que nasceu com o desejo de ajudar animais vulneráveis. A ideia do app é permitir que tutores façam doações (pra abrigos) de medicamentos veterinários parados em casa. Cada doação gera uma recompensa que poderá ser usada pra ganhar descontos em consultas veterinárias. Este projeto está em andamento e estará disponível para Android e iOS."
           technologies={[
-            { name: "WordPress", icon: "url" },
-            { name: "React", icon: "url" },
-            { name: "React", icon: "url" },
+            { name: "React Native", icon: reactLogo },
+            { name: "Node.js", icon: nodejsLogo },
+            { name: "PostgreSQL", icon: postgreeLogo },
           ]}
           images={[
             "https://via.placeholder.com/800x300?text=Image+1",

@@ -1,8 +1,11 @@
 import FadeCarousel from "./FadeCarrousel";
+import newTabIcon from "../img/new-tab-icon.svg";
 
 const PortfolioItem = ({
+  logo,
   projectName,
   status,
+  url,
   description,
   images,
   order,
@@ -14,10 +17,21 @@ const PortfolioItem = ({
       <div className="flex items-end gap-10">
         <div className={order}>
           <div id="header" className="flex items-center mb-4">
-            <div className="rounded-full bg-white/20 w-14 h-14 mr-4"></div>
+            <img className="h-10 mr-4" src={logo} />
             <div>
               <div className="mb-1">{projectName}</div>
-              <div className="text-xs opacity-50">{status}</div>
+              {url ? (
+                <a
+                  href={url}
+                  target="_blank"
+                  className="inline-flex items-center bg-violet hover:shadow-yellow-500/60 text-sm px-3 py-1 mt-1 rounded-full"
+                >
+                  <div>Abrir projeto</div>
+                  <img className="ml-2 w-4" src={newTabIcon} />
+                </a>
+              ) : (
+                <div className="text-xs opacity-50">{status}</div>
+              )}
             </div>
           </div>
 
@@ -32,7 +46,7 @@ const PortfolioItem = ({
               <div className="flex items-center gap-8">
                 {technologies.map((technologie) => (
                   <div className="item-tech flex items-center">
-                    <div className="rounded-full bg-white/20 w-10 h-10 mr-4"></div>
+                    <img className="h-8 mr-4" src={technologie.icon} />
                     <div>{technologie.name}</div>
                   </div>
                 ))}

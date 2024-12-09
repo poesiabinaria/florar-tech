@@ -32,7 +32,7 @@ const FeatureCard = ({ iconColor, content }) => {
       <div className="absolute top-0 -left-11">
         <img className="opacity-10 w-24" src={icon}></img>
       </div>
-      <div className="font-extralight text-sm leading-6 opacity-90 mt-2">
+      <div className="font-extralight text-sm leading-7 opacity-90 mt-2">
         {content}
       </div>
     </div>
