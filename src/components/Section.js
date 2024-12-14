@@ -7,7 +7,7 @@ const Section = ({ id, badge, title, theme, children }) => {
   return (
     <section
       id={id}
-      className={`container mx-auto relative px-20 py-20 my-10 rounded-3xl ${background}`}
+      className={`container mx-auto relative px-5 md:px-20 py-20 my-10 rounded-3xl ${background}`}
     >
       {/* <div
         className={`absolute -right-[9%] bottom-[44%] rotate-90 uppercase text-3xl text-center font-bold tracking-[1.5rem] opacity-40 ${textGradientStyle}`}

@@ -16,18 +16,18 @@ const PortfolioItem = ({
     <>
       <div className="flex items-end gap-10">
         <div className={order}>
-          <div id="header" className="flex items-center mb-4">
-            <img className="h-10 mr-4" src={logo} />
+          <div id="header" className="flex items-center mb-5">
+            <img className="h-12 mr-4" src={logo} />
             <div>
               <div className="mb-1">{projectName}</div>
               {url ? (
                 <a
                   href={url}
                   target="_blank"
-                  className="inline-flex items-center bg-violet hover:shadow-yellow-500/60 text-sm px-3 py-1 mt-1 rounded-full"
+                  className="inline-flex items-center bg-violet hover:bg-violet/90 text-xs px-3 py-1 rounded-full"
                 >
                   <div>Abrir projeto</div>
-                  <img className="ml-2 w-4" src={newTabIcon} />
+                  <img className="ml-2 w-[.9rem]" src={newTabIcon} />
                 </a>
               ) : (
                 <div className="text-xs opacity-50">{status}</div>

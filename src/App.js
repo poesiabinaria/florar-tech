@@ -25,33 +25,32 @@ import TextArea from "./components/TextArea";
 
 const App = () => {
   return (
-    <div>
+    <div className="px-5 md:px-10">
       <header className="px-2 py-10">
         <nav className="container mx-auto flex items-center justify-between">
-          <ul className="flex items-center gap-16 uppercase font-extgralight text-xs basis-1/3">
+          <ul className="hidden md:flex items-center gap-16 uppercase font-extgralight text-xs basis-1/3">
             <li className="opacity-60 hover:opacity-100">Processo</li>
             <li className="opacity-60 hover:opacity-100">Portfolio</li>
             <li className="opacity-60 hover:opacity-100">Depoimentos</li>
           </ul>
 
           <div className="basis-1/3">
-            <img className="mx-auto" src={logo} />
+            <img className="md:mx-auto" src={logo} />
           </div>
 
-          <div className="flex items-center justify-end basis-1/3">
-            <ul className="flex items-center gap-16 uppercase font-extgralight text-xs basis-1/3">
+          <div className="flex items-center justify-end gap-16 basis-1/3">
+            <ul className="hidden md:flex items-center gap-16 uppercase font-extgralight text-xs basis-1/3">
               <li className="flex gap-2 items-center opacity-60 hover:opacity-100">
                 <div>LinkedIn</div> <img className="w-4" src={newTabIcon} />
               </li>
               <li className="flex gap-2 items-center opacity-60 hover:opacity-100">
                 <div>Instagram</div> <img className="w-4" src={newTabIcon} />
               </li>
-              <li>
-                <button className="transition-all ease-out duration-100 bg-yellow-500 text-yellow-900 shadow-lg shadow-yellow-500/40 hover:shadow-yellow-500/60 text-sm font-semibold px-6 py-2 rounded-full">
-                  Contato
-                </button>
-              </li>
             </ul>
+
+            <button className="transition-all ease-out duration-100 bg-yellow-500 text-yellow-900 shadow-lg shadow-yellow-500/40 hover:shadow-yellow-500/60 text-sm font-semibold px-6 py-2 rounded-full">
+              Contato
+            </button>
           </div>
         </nav>
       </header>
@@ -94,7 +93,7 @@ const App = () => {
 
         <div
           id="feature-cards"
-          className="container mx-auto grid grid-cols-4 gap-14 mt-20"
+          className="container mx-auto grid sm:grid-cols-2 xl:grid-cols-4 gap-14 mt-20"
         >
           <FeatureCard
             iconColor="blue"
@@ -124,7 +123,7 @@ const App = () => {
         title="Meu processo de trabalho"
         theme="light"
       >
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid xl:grid-cols-3 gap-2">
           <WorkProcessCard
             icon=""
             title="Entendimento"
