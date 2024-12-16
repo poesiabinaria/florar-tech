@@ -14,7 +14,7 @@ const PortfolioItem = ({
 }) => {
   return (
     <>
-      <div className="flex items-end gap-10">
+      <div className="flex flex-col-reverse xl:flex-row items-end gap-10">
         <div className={order}>
           <div id="header" className="flex items-center mb-5">
             <img className="h-12 mr-4" src={logo} />
@@ -43,9 +43,9 @@ const PortfolioItem = ({
             <div className="technologies mt-10">
               <div className="text-sm mb-4">Tecnologias utilizadas</div>
 
-              <div className="flex items-center gap-8">
+              <div className="sm:flex items-center gap-8">
                 {technologies.map((technologie) => (
-                  <div className="item-tech flex items-center">
+                  <div className="item-tech flex items-center my-5 sm:my-0">
                     <img className="h-8 mr-4" src={technologie.icon} />
                     <div>{technologie.name}</div>
                   </div>
@@ -63,7 +63,7 @@ const PortfolioItem = ({
       {!isLastItem && (
         <div
           id="border-top"
-          className="h-[0.09rem] my-20 bg-gradient-to-r from-white/0 via-white/5"
+          className="h-[0.09rem] my-10 md:my-20 bg-gradient-to-r from-white/0 via-white/5"
         />
       )}
     </>

@@ -185,7 +185,7 @@ const App = () => {
             "https://via.placeholder.com/800x300?text=Image+2",
             "https://via.placeholder.com/800x300?text=Image+3",
           ]}
-          order="order-last"
+          order="xl:order-last"
           isLastItem={true}
         />
       </Section>
@@ -198,11 +198,11 @@ const App = () => {
       >
         <div>
           <div className="mb-10">
-            <div className="mb-2">
+            <div className="mb-4">
               Se preferir, entre em contato pelos meios abaixo!
             </div>
 
-            <div className="flex items-center gap-8">
+            <div className="md:flex items-center gap-8">
               <div className="flex items-center">
                 <img className="w-6 mr-3" src={emailIcon} />
                 <div className="flex items-center gap-2">
@@ -238,10 +238,10 @@ const App = () => {
             </div>
           </div>
 
-          <div className="bg-dark/10 rounded-3xl p-10">
+          <div className="bg-dark/10 rounded-3xl p-5 md:p-10">
             <form action="https://formspree.io/f/xanydpyy" method="POST">
-              <div className="flex gap-10">
-                <div className="w-1/2">
+              <div className="md:flex gap-10">
+                <div className="md:w-1/2">
                   <Input id="name" label="Nome*" required />
                   <Input
                     id="email"
@@ -256,12 +256,12 @@ const App = () => {
                     type="number"
                   />
                 </div>
-                <div className="w-1/2">
+                <div className="md:w-1/2 mt-6 md:mt-0">
                   <TextArea id="description" label="Descrição*" required />
                 </div>
               </div>
 
-              <div className="w-32 ml-auto">
+              <div className="md:w-32 ml-auto">
                 <button
                   className="w-full bg-yellow-500 text-yellow-900  hover:shadow-yellow-500/60 text-sm font-semibold px-6 py-3 mt-8 rounded-full"
                   type="submit"
