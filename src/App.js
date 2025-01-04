@@ -16,6 +16,18 @@ import reactLogo from "./img/react-logo.svg";
 import nodejsLogo from "./img/nodejs-logo.svg";
 import postgreeLogo from "./img/postgree-logo.png";
 
+import chatIcon from "./img/chat-icon.svg";
+import calendarIcon from "./img/calendar-icon.svg";
+import flagIcon from "./img/flag-icon.svg";
+
+import csticImage1 from "./img/portfolio/cstic-1.png";
+import csticImage2 from "./img/portfolio/cstic-2.png";
+import csticImage3 from "./img/portfolio/cstic-3.png";
+
+import petImage1 from "./img/portfolio/pet-1.png";
+import petImage2 from "./img/portfolio/pet-2.png";
+import petImage3 from "./img/portfolio/pet-3.png";
+
 import { gradientStyle, textGradientStyle } from "./utils/constants";
 import { useEffect, useState } from "react";
 import FadeCarousel from "./components/FadeCarrousel";
@@ -106,7 +118,7 @@ const App = () => {
           />
 
           <FeatureCard
-            iconColor="yellow"
+            iconColor="red"
             content="Me formei em Sistemas de Informação pelo Centro de Informática (CIn) da UFPE. Trabalhei para uma multinacional e atualmente atuo numa empresa de Segurança"
           />
 
@@ -125,21 +137,21 @@ const App = () => {
       >
         <div className="grid xl:grid-cols-3 gap-2">
           <WorkProcessCard
-            icon=""
+            icon={chatIcon}
             title="Entendimento"
             subtitle="Germinação"
             content="Começamos com uma conversa para que eu possa entender a sua ideia e todos os requisitos do projeto. Esse é o primeiro passo para mais ideias florescerem!"
           />
 
           <WorkProcessCard
-            icon=""
+            icon={calendarIcon}
             title="Planejamento"
             subtitle="Germinação"
             content="Em seguida, crio um cronograma detalhado, definindo as entregas e prazos. Assim nós saberemos o que esperar em cada etapa!"
           />
 
           <WorkProcessCard
-            icon=""
+            icon={flagIcon}
             title="Acompanhamento"
             subtitle="Germinação"
             content="Durante o desenvolvimento do protótipo/implementação até a entrega, você pode acompanhar o progresso para garantir que tudo esteja se saindo bem!"
@@ -162,11 +174,7 @@ const App = () => {
             { name: "WordPress", icon: wordpressLogo },
             { name: "Bootstrap", icon: bootstrapLogo },
           ]}
-          images={[
-            "https://via.placeholder.com/800x300?text=Image+1",
-            "https://via.placeholder.com/800x300?text=Image+2",
-            "https://via.placeholder.com/800x300?text=Image+3",
-          ]}
+          images={[csticImage1, csticImage2, csticImage3]}
           order="order-first"
         />
 
@@ -180,11 +188,7 @@ const App = () => {
             { name: "Node.js", icon: nodejsLogo },
             { name: "PostgreSQL", icon: postgreeLogo },
           ]}
-          images={[
-            "https://via.placeholder.com/800x300?text=Image+1",
-            "https://via.placeholder.com/800x300?text=Image+2",
-            "https://via.placeholder.com/800x300?text=Image+3",
-          ]}
+          images={[petImage1, petImage2, petImage3]}
           order="xl:order-last"
           isLastItem={true}
         />

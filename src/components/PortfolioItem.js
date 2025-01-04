@@ -15,7 +15,7 @@ const PortfolioItem = ({
   return (
     <>
       <div className="flex flex-col-reverse xl:flex-row items-end gap-10">
-        <div className={order}>
+        <div className={`${order} basis-1/2`}>
           <div id="header" className="flex items-center mb-5">
             <img className="h-12 mr-4" src={logo} />
             <div>
@@ -55,7 +55,7 @@ const PortfolioItem = ({
           </div>
         </div>
 
-        <div className="bg-violet/15 w-full">
+        <div className="bg-violet/15 w-full xl:basis-1/2">
           <FadeCarousel images={images} />
         </div>
       </div>

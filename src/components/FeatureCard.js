@@ -1,25 +1,35 @@
 import logoBlue from "../img/logo-blue.svg";
 import logoViolet from "../img/logo-violet.svg";
+import logoRed from "../img/logo-red.svg";
 import logoYellow from "../img/logo-yellow.svg";
 
+import ideaIcon from "../img/idea-icon.svg";
+import gridIcon from "../img/grid-icon.svg";
+import hatIcon from "../img/hat-icon.svg";
+import happyIcon from "../img/happy-icon.svg";
+
 const FeatureCard = ({ iconColor, content }) => {
-  let icon;
+  let logo, icon;
 
   switch (iconColor) {
     case "blue":
-      icon = logoBlue;
+      logo = logoBlue;
+      icon = ideaIcon;
       break;
 
     case "violet":
-      icon = logoViolet;
+      logo = logoViolet;
+      icon = gridIcon;
+      break;
+
+    case "red":
+      logo = logoRed;
+      icon = hatIcon;
       break;
 
     case "yellow":
-      icon = logoYellow;
-      break;
-
-    default:
-      icon = logoBlue;
+      logo = logoYellow;
+      icon = happyIcon;
       break;
   }
 
@@ -29,10 +39,11 @@ const FeatureCard = ({ iconColor, content }) => {
         id="border-top"
         className="h-[0.09rem] w-64 mx-auto mb-10 bg-gradient-to-r from-white/0 via-white/20"
       />
-      <div className="absolute top-0 -left-11">
-        <img className="opacity-10 w-24" src={icon}></img>
+      <div className="absolute top-8 -left-11">
+        <img className="opacity-20 w-24" src={logo}></img>
       </div>
       <div className="font-extralight text-sm leading-7 opacity-90 mt-2">
+        <img className="h-6 mb-2" src={icon} />
         {content}
       </div>
     </div>

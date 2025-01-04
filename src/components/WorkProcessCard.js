@@ -11,8 +11,10 @@ const WorkProcessCard = ({ icon, title, subtitle, content }) => {
       }}
     >
       <div className="flex items-center mb-4">
-        <div className="rounded-full border-2 border-dashed border-white/20">
-          <div className="rounded-full bg-white/20 w-14 h-14 m-1"></div>
+        <div className="rounded-full border-2 border-dashed border-white/40">
+          <div className="p-3">
+            <img className="w-8" src={icon} />
+          </div>
         </div>
 
         <div className="ml-4">
