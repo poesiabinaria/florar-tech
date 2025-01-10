@@ -182,7 +182,7 @@ const App = () => {
           logo={anjinhoPetLogo}
           projectName="Anjinho PET"
           status="Em andamento"
-          description="O app Anjinho PET é um projeto pessoal que nasceu com o desejo de ajudar animais vulneráveis. A ideia do app é permitir que tutores façam doações (pra abrigos) de medicamentos veterinários parados em casa. Cada doação gera uma recompensa que poderá ser usada pra ganhar descontos em consultas veterinárias. Este projeto está em andamento e estará disponível para Android e iOS."
+          description="O app Anjinho PET é um projeto pessoal que nasceu com o desejo de ajudar animais vulneráveis. A ideia do app é permitir que tutores façam doações (pra abrigos) de medicamentos veterinários que estão parados em casa. Cada doação gera uma recompensa que poderá ser usada pra ganhar descontos em consultas veterinárias. Este projeto está em andamento e estará disponível para Android e iOS."
           technologies={[
             { name: "React Native", icon: reactLogo },
             { name: "Node.js", icon: nodejsLogo },
@@ -195,10 +195,38 @@ const App = () => {
       </Section>
 
       <Section
+        id="testmonials-section"
+        badge="Depoimentos"
+        title="Colegas de trabalho"
+        theme="light"
+      >
+        <div className="">
+          <div className="relative">
+            <div className="absolute -top-[1rem] text-5xl opacity-30">"</div>
+            <div className="ml-8 mb-4 leading-7">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in
+              leo a libero porttitor ullamcorper at vel nulla. Fusce in
+              convallis elit. Sed dapibus commodo ligula in vulputate. Nullam
+              porttitor non nunc in facilisis. Etiam et varius odio. Ut quis
+              urna orci. Nulla facilisi. Suspendisse gravida neque at mauris
+              pharetra, nec molestie neque euismod. 
+            </div>
+          </div>
+          <div className="font-light ml-8">
+            <div className="flex items-center mb-1">
+              <div>Vinicius Brenner</div>
+              <div>Linkedin icon</div>
+            </div>
+            <div className="text-xs">Engenheiro de Software</div>
+          </div>
+        </div>
+      </Section>
+
+      <Section
         id="contact-section"
         badge="Contato"
         title="Como posso te ajudar?"
-        theme="light"
+        theme="dark"
       >
         <div>
           <div className="mb-10">
@@ -242,7 +270,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className="bg-dark/10 rounded-3xl p-5 md:p-10">
+          <div className="bg-violet/10 rounded-3xl p-5 md:p-10">
             <form action="https://formspree.io/f/xanydpyy" method="POST">
               <div className="md:flex gap-10">
                 <div className="md:w-1/2">
