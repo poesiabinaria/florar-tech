@@ -131,7 +131,7 @@ const App = () => {
 
           <FeatureCard
             iconColor="violet"
-            content="Sou um desenvolvedor com experiência sólida em Design! Sigo as boas práticas e prezo sempre pela ótima experiência do usuário"
+            content="Sou um desenvolvedor com boa experiência em Design! Sigo as boas práticas e prezo sempre pela ótima experiência do usuário"
           />
 
           <FeatureCard
@@ -157,21 +157,21 @@ const App = () => {
             icon={chatIcon}
             title="Entendimento"
             subtitle="Germinação"
-            content="Começamos com uma conversa para que eu possa entender a sua ideia e todos os requisitos do projeto. Esse é o primeiro passo para mais ideias florescerem!"
+            content="Começamos com uma conversa para que eu possa entender a sua ideia e os requisitos do projeto. Esse é o primeiro passo para mais ideias aparecerem!"
           />
 
           <WorkProcessCard
             icon={calendarIcon}
             title="Planejamento"
-            subtitle="Germinação"
+            subtitle="Nutrição"
             content="Em seguida, crio um cronograma detalhado, definindo as entregas e prazos. Assim nós saberemos o que esperar em cada etapa!"
           />
 
           <WorkProcessCard
             icon={flagIcon}
             title="Acompanhamento"
-            subtitle="Germinação"
-            content="Durante o desenvolvimento do protótipo/implementação até a entrega, você pode acompanhar o progresso para garantir que tudo esteja se saindo bem!"
+            subtitle="Floração"
+            content="Durante o desenvolvimento do protótipo/implementação até a entrega, você pode acompanhar o progresso para garantir que tudo esteja se saindo como o esperado!"
           />
         </div>
       </Section>
@@ -234,7 +234,7 @@ const App = () => {
               <div className="font-medium">Vinicius Brenner</div>
               <div>
                 <a
-                  href="https://www.linkedin.com/in/gabriel-mendes-macedo"
+                  href="https://www.linkedin.com/in/vinicius-a-brenner"
                   target="_blank"
                 >
                   <img className="w-4 ml-2" src={linkedInLogo} />
@@ -280,7 +280,7 @@ const App = () => {
               </div>
               <div>
                 <a
-                  href="https://www.instagram.com/florartech"
+                  href="https://www.instagram.com/florar.tech"
                   target="_blank"
                   className="flex items-center my-3"
                 >
