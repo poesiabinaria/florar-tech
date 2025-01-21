@@ -5,7 +5,7 @@ import logoYellow from "../img/logo-yellow.svg";
 const Input = ({ id, label, placeholder, required, type = "text" }) => {
   return (
     <div className="mb-6 last:mb-0">
-      <label className="block text-sm mb-2" for={id}>
+      <label className="block text-sm mb-2" htmlFor={id}>
         {label}
       </label>
       <input

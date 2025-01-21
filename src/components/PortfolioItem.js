@@ -44,8 +44,11 @@ const PortfolioItem = ({
               <div className="text-sm mb-4">Tecnologias utilizadas</div>
 
               <div className="sm:flex items-center gap-8">
-                {technologies.map((technologie) => (
-                  <div className="item-tech flex items-center my-5 sm:my-0">
+                {technologies.map((technologie, i) => (
+                  <div
+                    key={i}
+                    className="item-tech flex items-center my-5 sm:my-0"
+                  >
                     <img className="h-8 mr-4" src={technologie.icon} />
                     <div>{technologie.name}</div>
                   </div>

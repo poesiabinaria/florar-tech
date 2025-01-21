@@ -37,9 +37,9 @@ const FeatureCard = ({ iconColor, content }) => {
     <div className="relative">
       <div
         id="border-top"
-        className="h-[0.09rem] w-64 mx-auto mb-10 bg-gradient-to-r from-white/0 via-white/20"
+        className="h-[0.09rem] w-64 mx-auto mb-3 md:mb-10 bg-gradient-to-r from-white/0 via-white/20"
       />
-      <div className="absolute top-8 -left-11">
+      <div className="absolute top-8 -left-[70px] md:-left-11">
         <img className="opacity-20 w-24" src={logo}></img>
       </div>
       <div className="font-extralight text-sm leading-7 opacity-90 mt-2">

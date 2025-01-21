@@ -1,6 +1,5 @@
 import "./App.css";
 import FeatureCard from "./components/FeatureCard";
-import SectionTitle from "./components/SectionTitle";
 import Section from "./components/Section";
 import WorkProcessCard from "./components/WorkProcessCard";
 import logo from "./img/logo.svg";
@@ -29,8 +28,7 @@ import petImage2 from "./img/portfolio/pet-2.png";
 import petImage3 from "./img/portfolio/pet-3.png";
 
 import { gradientStyle, textGradientStyle } from "./utils/constants";
-import { useEffect, useState } from "react";
-import FadeCarousel from "./components/FadeCarrousel";
+
 import PortfolioItem from "./components/PortfolioItem";
 import Input from "./components/Input";
 import TextArea from "./components/TextArea";
@@ -84,7 +82,7 @@ const App = () => {
         </nav>
       </header>
 
-      <div id="hero" className="py-20">
+      <div id="hero" className="py-10 md:py-20">
         <div
           id="action-container"
           className="container mx-auto relative text-center"
@@ -122,7 +120,7 @@ const App = () => {
 
         <div
           id="feature-cards"
-          className="container mx-auto grid sm:grid-cols-2 xl:grid-cols-4 gap-14 mt-20"
+          className="container mx-auto grid sm:grid-cols-2 xl:grid-cols-4 gap-5 md:gap-14 mt-10 md:mt-20"
         >
           <FeatureCard
             iconColor="blue"
@@ -294,7 +292,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className="bg-violet/10 rounded-3xl p-5 md:p-10">
+          <div className="sm:bg-violet/10 rounded-3xl sm:p-5 md:p-10">
             <form action="https://formspree.io/f/xanydpyy" method="POST">
               <div className="md:flex gap-10">
                 <div className="md:w-1/2">
