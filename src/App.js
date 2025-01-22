@@ -85,9 +85,9 @@ const App = () => {
       <div id="hero" className="py-10 md:py-20">
         <div
           id="action-container"
-          className="container mx-auto relative text-center"
+          className="container mx-auto relative text-center -z-10"
         >
-          <div className="absolute -top-[15%] sm:-top-[35%] left-[20%] -z-10">
+          <div className="absolute -top-[15%] sm:-top-[35%] left-[20%]">
             <div
               className={`${gradientStyle} opacity-20 w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem] rounded-full blur-3xl`}
             />
@@ -100,14 +100,11 @@ const App = () => {
             </div>
           </div>
 
-          <h1 className="font-thin text-5xl mb-10 ">
+          <h1 className="font-thin text-5xl mb-10 leading-[4rem]">
             <span>
-              Criação de{" "}
-              <span className="leading font-light break-words">
-                Sites/Aplicativos
-              </span>
+              Criação de <span className="font-light">Sites / Aplicativos</span>
             </span>
-            <span className="block mt-6">
+            <span className="block">
               UI/UX <span className="font-light">Design</span>
             </span>
           </h1>
