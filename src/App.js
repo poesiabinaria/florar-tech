@@ -87,9 +87,9 @@ const App = () => {
           id="action-container"
           className="container mx-auto relative text-center"
         >
-          <div className="absolute -top-[35%] left-[20%]">
+          <div className="absolute -top-[15%] sm:-top-[35%] left-[20%] -z-10">
             <div
-              className={`${gradientStyle} opacity-20 w-[20rem] h-[20rem] rounded-full blur-3xl`}
+              className={`${gradientStyle} opacity-20 w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem] rounded-full blur-3xl`}
             />
           </div>
           <div className="absolute -top-[30%] left-[22%]">
@@ -100,9 +100,12 @@ const App = () => {
             </div>
           </div>
 
-          <h1 className="font-thin text-5xl mb-10">
+          <h1 className="font-thin text-5xl mb-10 ">
             <span>
-              Criação de <span className="font-light">Sites/Aplicativos</span>
+              Criação de{" "}
+              <span className="leading font-light break-words">
+                Sites/Aplicativos
+              </span>
             </span>
             <span className="block mt-6">
               UI/UX <span className="font-light">Design</span>
